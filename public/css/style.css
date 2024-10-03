@@ -1,0 +1,301 @@
+/* General body and layout styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .container {
+    flex: 1;
+} */
+
+/* footer */
+.foot{
+    position: relative;
+    bottom: -47px;
+    background-color: #000;
+    color: white;
+}
+
+.foot a{
+    transition: transform 0.3s ease;
+}
+
+.foot a:hover{
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Landing page */
+/* Index-specific styles */
+.index_body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Card image styles */
+.card-img-top {
+    border-radius: 1rem !important;
+    height: 12rem;
+    width: 100%;
+    align-self: center;
+    margin-top: 20px;
+}
+
+/* Card body text styling */
+.card-body p {
+    font-weight: 200;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+/* Container for cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+/* Card styling */
+.card {
+    border: none !important;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+    width: 17rem;
+}
+
+.card>p{
+    display: inline-block;
+}
+
+.btn>a{
+    color: #fff;  
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);  /*flag*/
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* description */
+.card-description{
+    overflow: hidden;        /* Hides overflowing content  */
+    display: -webkit-box;     /* Displays text in a block-level flex container */
+    -webkit-line-clamp: 2;    /* Limits the content to 2 lines*/
+    line-clamp: 2;
+    -webkit-box-orient: vertical;  /* Specifies the orientation of the box as vertical */
+    text-overflow: ellipsis;   /* Adds ellipsis (...) at the end of the overflow */
+}
+
+/* Button styling */
+.btn-view {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* Row styling */
+.row {
+    justify-content: space-evenly;
+}
+
+.logo{
+    font-weight: bolder;
+    font-size: 800;
+}
+
+.navbar a{
+    font-weight: 500;
+    font-size: 600;
+}
+
+/* dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-toggle{
+    display: inline-block !important;
+    background-color: transparent !important; /* Slight transparency */
+    border: none !important; /* Optional: Remove border */
+    box-shadow: none !important; /* Optional: Remove shadow */
+}
+
+.dropdown-toggle{
+    color: #000 !important;
+    margin-left: 25%;
+}
+
+.drop-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* User-verification */
+/* register */
+.register-container {
+    background-color: #669fd8;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: #218838;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+/* login */
+.login-container {
+    background-color: #669fd8;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group-login {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group-login label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group-login input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #218838;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+/* read.js */
+/* buttons */
+.btn-edit{
+    display: inline-block;
+    /* border: 2px solid red; */
+}
+
+.btn-delete{
+    display: inline-block;
+}
+
+/* body */
+.read-body{
+    display: flex;
+}
+
+.read-head{
+    margin-left: 38%;
+    margin-bottom: 20px;
+}
+
+.card-img-top-read{
+    width: 29%;
+    max-height: 30%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.46);
+    border: 0.1px solid #000;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-img-top-read:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);
+}
+
+.read-card{
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+.read-list{
+    margin-left: 30%;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}

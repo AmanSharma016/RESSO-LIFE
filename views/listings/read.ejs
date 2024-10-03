@@ -1,0 +1,33 @@
+<% layout("layouts/boilerplate") %>
+  <body class="read-body">
+    <h2 class="read-head"><%= listing.title %></h2>
+    <div class="read-card">
+      <img class="card-img-top-read" src="<%= listing.image.url %>" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text read-list"><%= listing.description %></p>
+      </div>
+    </div>
+    <ul class="read-list">
+      <li><%= listing.title %></li>
+      <li><%= listing.description %></li>
+      <li>&#8377;<%= listing.price.toLocaleString("en-IN"); %></li>
+      <li><%= listing.location %></li>
+      <li><%= listing.country %></li>
+    </ul>
+    <br>
+    <a class="btn btn-edit btn-outline-dark" href="/listings/<%= listing._id %>/edit">edit this listing</a>
+    <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+      <button type="submit" class="btn btn-delete btn-danger">delete ur post</button>
+    </form>
+    <hr>
+    <form action="/listings/<% listing.id %>/reviews" method="post">
+      <div>
+        <label for="review">Review</label>
+        <input type="range" id="review" name="review">
+      </div>
+      <div>
+        <label for="description">Write a review</label>
+        <input type="text" name="description" id="description" min="1" max="5" >
+      </div>
+    </form>
+  </body>

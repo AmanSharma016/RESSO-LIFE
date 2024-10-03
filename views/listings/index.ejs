@@ -1,0 +1,96 @@
+<% layout("layouts/boilerplate") %>
+  <body>
+    <div class="index_body">
+      <h2>Get Your Destination At Your Fingure Tips</h2>
+      <div class="drop-container mt-5">
+        <div class="d-inline-block">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Delhi
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+              <a class="dropdown-item" href="#">Sea Facing</a>
+              <a class="dropdown-item" href="#">Near Historial Monuments</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mumbai
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+              <a class="dropdown-item" href="#">Sea Facing</a>
+              <a class="dropdown-item" href="#">Near Historial Monuments</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Jaipur
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+              <a class="dropdown-item" href="#">Sea Facing</a>
+              <a class="dropdown-item" href="#">Near Historial Monuments</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Kashmir
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+              <a class="dropdown-item" href="#">Sea Facing</a>
+              <a class="dropdown-item" href="#">Near Historial Monuments</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Meghalya
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+              <a class="dropdown-item" href="#">Sea Facing</a>
+              <a class="dropdown-item" href="#">Near Historial Monuments</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Goa
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Sea Facing</a>
+              <a class="dropdown-item" href="#">Near Historial Monuments</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <form action="/listings/new" method="GET"> -->
+        <!-- <button>Create New Listing</button> -->
+      <!-- </form>  -->
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for(let listing of allListings){ %>
+          <div class="card col">
+            <a href="./listings/<%= listing._id %>"><img class="card-img-top" src="<%= listing.image.url %>" alt="Card image cap"></a>
+            <div class="card-body">
+              <h6 class="card-title"><%= listing.title %></h6>
+              <h6><%= listing.location %>,<%= listing.country %></h6>
+               <button class="btn btn-primary" ><a href="./listings/<%= listing._id %>">&#8377;<%= listing.price.toLocaleString("en-IN") %></a></button>
+            </div>
+          </div>
+          <% } %>
+      </div>
+    </div>
+  </body>
+
